@@ -15,6 +15,13 @@ function App() {
   const handleIdChange = (event) => {
     setIdValue(event.target.value)
   }
+  const handleKeyPress = (event) => {
+    if(event.key === 'Enter'){
+      if(!disabled){
+        addStudentList()
+      }
+    }
+  }
   const editStudentHandler = (student) => {
     setEdit(student)
     setIdValue(student.id)
@@ -63,7 +70,7 @@ function App() {
     <div className='lg:container mx-auto'>
       <div className="w-full flex justify-center flex-col items-center">
         <h2 className="text-3xl font-bold mb-8 mt-2">Ini CRUD</h2>
-        <InputForm id={idValue} onClick={addStudentList} name={nameValue} onNameChange={handleNameChange} onIdChange={handleIdChange}  cancelEdit={cancelEditStudent} editStudent={edit} disabled={disabled}/>
+        <InputForm id={idValue} onClick={addStudentList} name={nameValue} onNameChange={handleNameChange} onIdChange={handleIdChange}  cancelEdit={cancelEditStudent} editStudent={edit} disabled={disabled} onKeyPress={handleKeyPress}/>
         <Table students={studentList} deleteStudent={deleteStudent} editStudent={editStudentHandler}/>
       </div>
     </div>

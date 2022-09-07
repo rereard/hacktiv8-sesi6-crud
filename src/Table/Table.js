@@ -11,7 +11,7 @@ const Table = ({students, deleteStudent, editStudent}) => {
               </tr>
             </thead>
             <tbody>
-                {students.map((student, index) => (
+                {students.map((student) => (
                     <tr className='h-14 border-b-2'>
                         <td>{student.id}</td>
                         <td>{student.name}</td>
@@ -21,14 +21,6 @@ const Table = ({students, deleteStudent, editStudent}) => {
                         </td>
                     </tr>
                 ))}
-              {/* <tr className='h-14 border-b-2'>
-                <td>A11.2020.12723</td>
-                <td>Rere</td>
-                <td>
-                  <Button title="Edit" addStyle={"w-44 p-1 mr-3"}/>
-                  <Button title="Delete" addStyle={"w-44 p-1"}/>
-                </td>
-              </tr> */}
             </tbody>
           </table>
         </div>
