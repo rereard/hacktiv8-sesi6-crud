@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import InputForm from './InputForm/InputForm';
-import Table from './Table.js/Table';
+import Table from './Table/Table';
 let dataStorage = localStorage.getItem('studentList')
 function App() {
   const [studentList, setStudentList] = useState(JSON.parse(dataStorage) || [])
