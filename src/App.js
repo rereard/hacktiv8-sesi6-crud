@@ -67,9 +67,9 @@ function App() {
     }
   }, [nameValue, idValue]);
   return (
-    <div className='lg:container mx-auto'>
-      <div className="w-full flex justify-center flex-col items-center">
-        <h2 className="text-3xl font-bold mb-8 mt-2">Ini CRUD</h2>
+    <div className='flex justify-center'>
+      <div className="md:w-full w-4/5 flex justify-center flex-col items-center">
+        <h2 className="text-3xl font-bold mb-8 mt-2 text-center">Ini CRUD</h2>
         <InputForm id={idValue} onClick={addStudentList} name={nameValue} onNameChange={handleNameChange} onIdChange={handleIdChange}  cancelEdit={cancelEditStudent} editStudent={edit} disabled={disabled} onKeyPress={handleKeyPress}/>
         <Table students={studentList} deleteStudent={deleteStudent} editStudent={editStudentHandler}/>
       </div>

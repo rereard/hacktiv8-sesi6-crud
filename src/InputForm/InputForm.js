@@ -3,7 +3,7 @@ import Button from "../Atom/Button"
 const InputForm = ({id, name, onNameChange, onIdChange, onClick, cancelEdit, editStudent, disabled, onKeyPress}) => {
     
     return(
-        <div className="flex flex-col w-96 text-lg">
+        <div className="flex flex-col md:w-96 w-11/12 text-lg">
             <label>{editStudent.id ? 'Update Student ID:' : 'Student ID:'}</label>
             <InputText value={id} onChange={onIdChange} onKeyPress={onKeyPress}/>
             <label>{editStudent.id ? 'Update Student Name:' : 'Student Name:'}</label>
