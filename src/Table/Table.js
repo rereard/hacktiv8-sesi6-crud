@@ -1,7 +1,7 @@
 import Button from "../Atom/Button"
 const Table = ({students, deleteStudent, editStudent}) => {
     return(
-        <div className='md:w-full mt-5 px-4'>
+        <div className='mt-5 px-4'>
           <table className='table-fixed w-full text-center overflow-x-auto'>
             <thead>
               <tr className="border-b-2 border-black">
